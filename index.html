@@ -5,17 +5,57 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <title>Weather</title>
 </head>
 <body>
   <header>
-    Weather Dashboard
+    <h1>Weather Dashboard <h1>
   </header>
+<!--cONTAINS ALL CONTENT-->
+  <main class="main-page">
+    <!--Form to search for the city -->
+    <section id="city-search" class="flex-row justify-space-between col-4">
+      <form id="city-form">
+
+        <label class="search-label" for="city">Search for City: </label>
+
+        <input type="text" id="city" placeholder="City Name">
+
+        <button type="submit" id="searchbtn">Search</button>
+      </form>
+
+      <!--create buttons later in JS-->
+      <div id="past-search">
+
+    
+      </div>
+
+    </section>
+    <!--Ends the search for city -->
+
+
+    <!--Start of big display of current city ifo-->
+    <section id="current-city" class="col-6">
+      <h2 class="city-name"></h2><span id="date-today"></span><img id="weather-img" />
+      
+      <div class="city-display">
+
+      
+      </div>
+
+      <!-- 5 day forecast for city-->
+      <!--create cards in JS-->
+      <div class="fiveday">
+
+      </div>
+
+    </section>
+  </main>
+
   
-  <div class="searchForm">
-    <h2>Search for city</h2>
-    <input id="cityInput">
-    <button id="searchBtn">Search</button>
-  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 </html>
