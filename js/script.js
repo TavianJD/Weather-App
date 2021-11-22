@@ -88,11 +88,11 @@ var cityWeather = function(weather, searchTerm) {
     humidityEl.textContent = ("Humidity:" + weather.main.humidity + '\u0025')
     weatherBoxEl.appendChild(humidityEl);
 
-    var APIUrl = "http://api.openweathermap.org/data/2.5/onecall?lat=" + weather.coord.lat + "&lon=" + weather.coord.lon + "&appid=" + apiKey + "&units=imperial";
+    var apiUrl2 = "http://api.openweathermap.org/data/2.5/onecall?lat=" + weather.coord.lat + "&lon=" + weather.coord.lon + "&appid=" + apiKey + "&units=imperial";
 
         console.log(weatherBoxEl)
 
-        fetch(APIUrl)
+        fetch(apiUrl2)
         .then(function (response2) {
             response2.json()
             .then(function(data2){
