@@ -37,7 +37,7 @@ var citySubmitHandler = function(event) {
 var forecastHandler = function(city) {
 
     // create variable to understand city input using query parameters
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey +"&units=imperial" + "https://cors-anywhere.herokuapp.com/" ;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey +"&units=imperial";
 
     // fetch URL to return weather data about currentCity that user inputs
 
@@ -59,7 +59,7 @@ var cityWeather = function(weather, searchTerm) {
     citySearch.textContent = searchTerm
 
     // variable for icons of weather 
-    var weatherImg = "http://openweathermap.org/img/wn/" + weather.weather[0].icon + ".png";
+    var weatherImg = "https://openweathermap.org/img/wn/" + weather.weather[0].icon + ".png";
 
 
     // use moment to display the date 
@@ -88,7 +88,7 @@ var cityWeather = function(weather, searchTerm) {
     humidityEl.textContent = ("Humidity:" + weather.main.humidity + '\u0025')
     weatherBoxEl.appendChild(humidityEl);
 
-    var apiUrl2 = "http://api.openweathermap.org/data/2.5/onecall?lat=" + weather.coord.lat + "&lon=" + weather.coord.lon + "&appid=" + apiKey + "&units=imperial";
+    var apiUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + weather.coord.lat + "&lon=" + weather.coord.lon + "&appid=" + apiKey + "&units=imperial";
 
         console.log(weatherBoxEl)
 
@@ -115,7 +115,7 @@ var futureWeather = function(data2) {
 
 
             // need the icons for each day of the week for forecast
-            const futureIcon = "http://openweathermap.org/img/wn/" + data2.daily[day].weather[0].icon + ".png";
+            const futureIcon = "https://openweathermap.org/img/wn/" + data2.daily[day].weather[0].icon + ".png";
 
             // dynamically create each card for each future forecast day
 
