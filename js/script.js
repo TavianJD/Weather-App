@@ -37,7 +37,7 @@ var citySubmitHandler = function(event) {
 var forecastHandler = function(city) {
 
     // create variable to understand city input using query parameters
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey +"&units=imperial";
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey +"&units=imperial" + "https://cors-anywhere.herokuapp.com/" ;
 
     // fetch URL to return weather data about currentCity that user inputs
 
